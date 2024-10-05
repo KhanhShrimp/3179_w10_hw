@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <script src="vega_lite_vis.js"></script>
+
+    <title>Australia Economy graph </title>
+
+    <style>
+        .container {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .graph {
+            flex: 1; /* Takes up one portion of the available space */
+        }
+
+        .paragraph {
+            flex: 1; /* Takes up one portion of the available space */
+            padding-left: 20px;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="graph" id="business_entry_chart"></div>
+        <div class="paragraph">
+            <h1>Business Entry Graph</h1>
+            <p>This graph shows the total number of business entries in different states from 2020 to 2023. 
+                The data represents the trend of new businesses being established over time, providing insights into economic growth and stability. 
+                Notably, there is a steep decrease after the COVID years, indicating a slowdown in the formation of new businesses following the initial pandemic period.
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="graph" id="business_exit_chart"></div>
+        <div class="paragraph">
+            <h1>Business Exit Graph</h1>
+            <p>This graph represents the total number of business exits in different states from 2020 to 2023. 
+                It highlights the rate of businesses closing down during these years, which can be a reflection of economic challenges or market shifts. 
+                In conjunction with the previous chart, this shows a steep increase in businesses closing down after the COVID years, illustrating a significant shift in the business landscape following the pandemic.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

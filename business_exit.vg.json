@@ -1,0 +1,57 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 400,
+    "title": "Business Exits by Australia States from 2020-2023",
+    "data": {
+      "url": "business_exit_clean.csv"
+    },
+    "selection" : {
+        "state_highlight" : {
+            "type" : "multi",
+            "fields" : [ "Label" ],
+            "bind" : "legend"
+        }
+    },
+    "mark": "line",
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "ordinal",  
+        "timeUnit": "year",
+        "title": "Year"
+      },
+      "y": {
+        "field": "Total number of business exits",
+        "type": "quantitative",
+        "title": "Total Number of Business Exits"
+      },
+      "color": {
+        "field": "Label",
+        "type": "nominal",
+        "title": "State"
+      },
+      "opacity" : {
+        "condition" : { "selection" : "state_highlight", "value" : 0.6 },
+        "value" : 0.2
+      },
+      "tooltip": [
+        {
+          "field": "Year",
+          "type": "temporal",
+          "title": "Year"
+        },
+        {
+          "field": "Label",
+          "type": "nominal",
+          "title": "State"
+        },
+        {
+          "field": "Total number of business exits",
+          "type": "quantitative",
+          "title": "Total Exits"
+        }
+      ]
+    }
+  }
+  
